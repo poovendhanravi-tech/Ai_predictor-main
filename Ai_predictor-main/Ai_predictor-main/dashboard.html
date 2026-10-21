@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard | StudentAI</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">🚀 <span>StudentAI</span></a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="predict.html">Performance</a></li>
+            <li><a href="dropout.html">Dropout Risk</a></li>
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+
+        <div class="menu-toggle" id="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="overlay" id="overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="predict.html">Performance</a></li>
+            <li><a href="dropout.html">Dropout Risk</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Analytics <span>Dashboard</span></h1>
+            <p>Comprehensive overview of student performance metrics and institutional trends.</p>
+        </div>
+        <div class="hero-image">
+            <img src="static/images/dashboard_hero.png" alt="Analytics View">
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="grid-container">
+            <div class="card">
+                <h2>Average Scores by Subject</h2>
+                <div class="chart-container">
+                    <canvas id="scoresBarChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Overall Pass/Fail Rate</h2>
+                <div class="chart-container">
+                    <canvas id="passFailPieChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Study Hours vs Performance Trend</h2>
+                <div class="chart-container">
+                    <canvas id="studyTrendLineChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Quick Stats</h2>
+                <div style="margin-top: 1rem;">
+                    <p><strong>Total Students Evaluated:</strong> 1,240</p>
+                    <p><strong>Average Attendance:</strong> 84%</p>
+                    <p><strong>Success Rate:</strong> 78.5%</p>
+                    <p><strong>High Risk Students:</strong> 12%</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Success Predictor Project. Built by Reddy Website Builders</p>
+    </footer>
+
+    <script src="static/js/charts.js"></script>
+</body>
+</html>
